@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Pizza Margherita",
+    "description": "Tomate, Mozzarella, Basilikum",
+    "image": "assets/images/pizza.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Burger",
+    "description": "Rindfleisch, Käse, Salat",
+    "image": "assets/images/burger.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Pasta",
+    "description": "Pesto, Teigwaren",
+    "image": "assets/images/pasta.jpg"
+  }
+]
