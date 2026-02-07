@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "keywords": ["fleisch", "hauptgang"],
+    "name": "Pulled Beef Raclette Burger",
+    "description": "Tomate, Mozzarella, Basilikum",
+    "image": "assets/images/pizza.jpg",
+    "ingredients": [
+      "400g Pulled Beef",
+      "20g Butter",
+      "4 Brioche Burger-Brötchen",
+      "1 rote Zwiebel",
+      "4 Scheiben Raclettekäse",
+      "12 Scheiben eingelegte Salatgurken",
+      "4 EL Preiselbeerkonfitüre"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Burger",
+    "description": "Rindfleisch, Käse, Salat",
+    "image": "assets/images/burger.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Pasta",
+    "description": "Pesto, Teigwaren",
+    "image": "assets/images/pasta.jpg"
+  }
+]
