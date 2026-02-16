@@ -4,7 +4,7 @@
 :root {
   --background-color: #ffffff;
   --widget-background-color: #f2f2f7;
-  --outline-color: #ddd;
+  --outline-color: rgba(0, 0, 0, 0.08);
   --heading-color: #111827;
   --text-color: #374151;
   --secondary-text-color: #6b7280;
@@ -18,7 +18,7 @@
 [data-theme="dark"] {
   --background-color: #000000;
   --widget-background-color: #1c1c1e;
-  --outline-color: #272727;
+  --outline-color: rgba(255, 255, 255, 0.08);
   --heading-color: #f9fafb;
   --text-color: #d1d5db;
   --secondary-text-color: #9ca3af;
@@ -408,4 +408,5 @@ Muss hier, wird sonst überschrieben
   display: block !important;
   animation: fadeIn 0.3s ease;
 }
+
 
