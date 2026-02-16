@@ -1,5 +1,5 @@
-const CORE_CACHE = "menu-core-v12";
-const IMAGE_CACHE = "menu-images-v12";
+const CORE_CACHE = "menu-core-v13";
+const IMAGE_CACHE = "menu-images-v13";
 
 // 🔥 Automatisch korrekten Base-Pfad ermitteln
 const BASE_PATH = self.location.pathname.replace(/\/service-worker\.js$/, "");
@@ -124,4 +124,5 @@ self.addEventListener("fetch", (event) => {
     })
   );
 });
+
 
