@@ -17,7 +17,7 @@
 
 [data-theme="dark"] {
   --background-color: #000000;
-  --widget-background-color: #0a0a0a;
+  --widget-background-color: #1c1c1e;
   --outline-color: #272727;
   --heading-color: #f9fafb;
   --text-color: #d1d5db;
@@ -408,3 +408,4 @@ Muss hier, wird sonst überschrieben
   display: block !important;
   animation: fadeIn 0.3s ease;
 }
+
