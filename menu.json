@@ -1,0 +1,55 @@
+[
+  {
+    "id": 1,
+    "keywords": ["fleisch", "hauptgang"],
+    "name": "Pulled Beef Raclette Burger",
+    "description": "Ein herzhafter Burger, kombiniert mit einer Schweizerischen Spezialität. Tipp: Kartoffelstock passt hier sehr gut dazu",
+    "image": "assets/images/pizza.jpg",
+    "ingredients": [
+      "400g Pulled Beef",
+      "20g Butter",
+      "4 Brioche Burger-Brötchen",
+      "1 rote Zwiebel",
+      "4 Scheiben Raclettekäse",
+      "12 Scheiben eingelegte Salatgurken",
+      "4 EL Preiselbeerkonfitüre"
+    ]
+  },
+  {
+    "id": 2,
+    "keywords": ["fleisch", "hauptgang"],
+    "name": "Burger",
+    "description": "In diesen Burger will jeder reineissen",
+    "image": "assets/images/burger.jpg",
+    "ingredients": [
+      "1000kg Beef",
+      "20g Butter",
+      "4 Brioche Burger-Brötchen",
+      "1 rote Zwiebel"
+    ]
+  },
+  {
+    "id": 3,
+    "keywords": ["vegetarisch", "hauptgang"],
+    "name": "Pasta",
+    "description": "Pesto, Teigwaren",
+    "image": "assets/images/pasta.jpg",
+    "ingredients": [
+      "400g Pasta",
+      "20g Butter",
+      "4 EL Pesto"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Salade niçoise",
+    "keywords": ["fleisch", "hauptgang", "vorspeise"],
+    "description": "Mit diesem leckeren Salat aus Südfrankreich kann man fast nichts falsch machen",
+    "image": "assets/images/leer.png",
+    "ingredients": [
+      "400g Pasta",
+      "20g Butter",
+      "4 EL Pesto"
+    ]
+  }
+]
