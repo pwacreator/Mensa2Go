@@ -9,7 +9,10 @@
   --text-color: #374151;
   --secondary-text-color: #6b7280;
   --accent-blue-color: #1e40af;
-  --accent-green-color: #1dbf73;
+  --accent-light-green-color: #66bb6a;
+  --accent-dark-green-color: #00b04d;
+  --accent-orange-color: #f39c12;
+  --accent-cool-blue-color: #3498db;
   --accent-red-color: #ff4d56;
   --top-height: 60px;
   --bottom-height: 80px;
@@ -25,9 +28,6 @@
   --text-color: #d1d5db;
   --secondary-text-color: #9ca3af;
   --secondary-text-color: #6b7280;
-  --accent-blue-color: #1e40af;
-  --accent-green-color: #1dbf73;
-  --accent-red-color: #ff4d56;
   /* --background-color: #000000;
   --widget-background-color: #0f1a2b; blaue Version*/
 }
@@ -88,7 +88,7 @@ body {
   padding: 20px;
 }
 /* =====================
-     Top-bar
+     Top-bar, Pages, Bottom-bar
   ===================== */
 .top-bar {
   position: fixed;
@@ -173,83 +173,13 @@ body {
   padding-bottom: env(safe-area-inset-bottom);
 }
 
-/* =====================
-   Rezepte
-===================== */
-#menu {
-  position: absolute;
-  top: var(--top-height);
-  right: 0;
-  width: 100vw;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.menu-list {
-  display: grid;
-  padding: 40px;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 500px));
-  gap: 1rem;
-}
-/* Detail */
-.no-scroll {
-  overflow: hidden;
-  touch-action: none;
-}
-.menu-detail {
-  position: fixed;
-  inset: 0;
-  background-color: var(--background-color);
-  transform: translateX(100%);
-  transition: transform 0.3s ease;
-  overflow-y: auto; /* Detail darf selbst scrollen */
-  padding-top: var(--top-height);
-  display: flex;
-  justify-content: center;
-}
-.menu-detail.active {
-  transform: translateX(0);
-}
-.rezept-detail {
-  height: 400vh;
-  width: 80vw;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-#backBtn,
-.suggestion {
-  background-color: var(--widget-background-color);
-  border-color: transparent;
-  padding: 10px;
-  border-radius: 17px;
-  margin: 20px 0 10px 0;
-  width: fit-content;
-  color: var(--heading-color);
-  font-size: 18px;
-}
-.rimg {
-  width: 80vw;
-  border-radius: 20px;
-  align-self: center;
-}
-h3 {
-  margin: 0;
-  padding: 0;
-}
-.zutaten-liste {
-  text-align: left;
-  padding-left: 15px;
-}
-
 /*==============
 Home
 ==============*/
 .home-first {
   display: flex;
   flex-direction: column;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .home-heading {
   color: var(--heading-color);
@@ -298,7 +228,6 @@ Home
   position: absolute;
   z-index: 10;
   transform: rotate(35deg);
-  color: #f9fafb;
   font-weight: bold;
   padding: 40px 20px 5px 40px;
   width: 100px;
@@ -314,7 +243,11 @@ Home
   background-color: var(--accent-red-color);
 }
 #home-random .menu-item:nth-child(3) .menu-daily-tipp {
-  background-color: var(--accent-green-color);
+  background: linear-gradient(
+    15deg,
+    var(--accent-light-green-color),
+    var(--accent-dark-green-color)
+  );
 }
 
 body {
@@ -330,6 +263,102 @@ body {
 a {
   color: var(--heading-color);
   text-decoration: none;
+}
+/* =====================
+   Menu
+===================== */
+#menu {
+  position: absolute;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.menu-list {
+  display: grid;
+  /*grid-template-columns: repeat(auto-fit, minmax(220px, 500px));*/
+  gap: 1rem;
+}
+.menu-first {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+#search-input {
+  background-color: var(--widget-background-color);
+  color: var(--heading-color);
+  font-size: 18px;
+  border: transparent;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid var(--widget-background-color);
+  transition: all 0.3s ease;
+  margin-bottom: 10px;
+}
+#search-input:focus {
+  outline: none;
+  border: 1px solid var(--accent-blue-color);
+}
+/* Nur anzeigen, wenn input fokussiert.
+.menu-first .colors {
+  display: none;
+}
+.menu-first #search-input:focus ~ .colors {
+  display: flex;
+}*/
+/* Detail */
+.no-scroll {
+  overflow: hidden;
+  touch-action: none;
+}
+.menu-page{
+  margin-bottom: calc(var(--bottom-height) + 10px);
+}
+.menu-detail {
+  position: fixed;
+  inset: 0;
+  background-color: var(--background-color);
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  overflow-y: auto; /* Detail darf selbst scrollen */
+  padding-top: var(--top-height);
+  display: flex;
+  justify-content: center;
+}
+.menu-detail.active {
+  transform: translateX(0);
+}
+.rezept-detail {
+  height: 400vh;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#backBtn,
+.suggestion {
+  background-color: var(--widget-background-color);
+  border-color: transparent;
+  padding: 10px;
+  border-radius: 17px;
+  margin: 20px 0 10px 0;
+  width: fit-content;
+  color: var(--heading-color);
+  font-size: 18px;
+}
+.rimg {
+  width: 80vw;
+  border-radius: 20px;
+  align-self: center;
+}
+h3 {
+  margin: 0;
+  padding: 0;
+}
+.zutaten-liste {
+  text-align: left;
+  padding-left: 15px;
 }
 /*==============
 Einstellungen
@@ -460,11 +489,13 @@ input:checked + .slider::before {
 /* =====================
      Main
   ===================== */
-main {
-  padding-top: var(--top-height);
-  padding-bottom: var(--bottom-height);
-  height: calc(100vh - var(--top-height) - var(--bottom-height));
+
+section {
+  margin-top: var(--top-height);
+  margin-bottom: var(--bottom-height);
   color: var(--heading-color);
+  width: 80vw;
+  align-self: center;
 }
 .blue {
   background-color: var(--accent-blue-color);
@@ -473,10 +504,29 @@ main {
   background-color: var(--accent-red-color);
 }
 .green {
-  background-color: var(--accent-green-color);
+  background: linear-gradient(
+    135deg,
+    var(--accent-light-green-color),
+    var(--accent-dark-green-color)
+  );
+}
+.light-green {
+  background-color: var(--accent-light-green-color);
+}
+.dark-green {
+  background-color: var(--accent-dark-green-color);
+}
+.orange {
+  background-color: var(--accent-orange-color);
+}
+.cool-blue {
+  background-color: var(--accent-cool-blue-color);
 }
 .ball {
   width: 8px;
+}
+.colors img{
+ height: 20px;
 }
 /*
 Muss hier, wird sonst überschrieben

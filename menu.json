@@ -43,7 +43,7 @@
   {
     "id": 4,
     "name": "Salade niçoise",
-    "keywords": ["fleisch", "hauptgang", "vorspeise"],
+    "keywords": ["fleisch", "hauptgang", "vorspeise", "salat"],
     "description": "Mit diesem leckeren Salat aus Südfrankreich kann man fast nichts falsch machen",
     "image": "assets/images/leer.png",
     "ingredients": [

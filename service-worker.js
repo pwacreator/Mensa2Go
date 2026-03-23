@@ -1,5 +1,5 @@
-const CORE_CACHE = "menu-core-v3";
-const IMAGE_CACHE = "menu-images-v3";
+const CORE_CACHE = "menu-core-v4";
+const IMAGE_CACHE = "menu-images-v4";
 
 // Automatisch korrekten Base-Pfad ermitteln
 const BASE_PATH = self.location.pathname.replace(/\/service-worker\.js$/, "");
@@ -22,6 +22,12 @@ const CORE_ASSETS = [
   BASE_PATH + "/assets/icons/icon-512.png",
   BASE_PATH + "/assets/icons/icon-light.png",
   BASE_PATH + "/assets/icons/icon-dark.png",
+  BASE_PATH + "/assets/icons/dessert.png",
+  BASE_PATH + "/assets/icons/drink.png",
+  BASE_PATH + "/assets/icons/salad.png",
+  BASE_PATH + "/assets/icons/hotdog.png",
+  BASE_PATH + "/assets/icons/soup.png",
+  BASE_PATH + "/assets/icons/sidedishes.png",
 ];
 
 
